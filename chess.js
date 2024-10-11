@@ -13,7 +13,7 @@ let board = [
 ];
 
 // Images for chess pieces
-const pieceImages = {
+const images = {
     '♚': 'images/king(b).png',
     '♛': 'images/queen(b).png',
     '♜': 'images/rook(b).png',

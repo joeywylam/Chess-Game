@@ -45,7 +45,11 @@ function renderBoard() {
 
             const piece = board[row][col];
             if (piece) {
-                square.style.backgroundImage = `url(${pieceImages[piece]})`;
+                const imageUrl = pieceImages[piece];
+                square.style.backgroundImage = `url(${imageUrl})`; // Ensure this line is present
+                square.style.backgroundSize = 'contain'; // Adjust if needed
+                square.style.backgroundRepeat = 'no-repeat'; // Prevent repetition
+                square.style.backgroundPosition = 'center'; // Center the image
             }
 
             square.addEventListener('click', () => handleSquareClick(row, col));
